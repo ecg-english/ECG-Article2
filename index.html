@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Pronunciation Hub | 英語発音・完全攻略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen pb-20">
+    <div>
+        <!-- ヒーローセクション（発音バージョン） -->
+        <header class="hero-animate bg-indigo-900 text-white pt-12 pb-16 px-4 text-center rounded-b-[3rem] shadow-xl mb-10 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+                <!-- アイコン変更: 音符や波形など -->
+                <i class="fa-solid fa-headphones-simple hero-bg-icon text-9xl absolute top-[-20px] left-[-20px] text-indigo-800"></i>
+                <i class="fa-solid fa-microphone-lines hero-bg-icon text-9xl absolute bottom-[-20px] right-[-20px] text-indigo-800"></i>
+            </div>
+            <h1 class="hero-title text-3xl md:text-5xl font-bold mb-4 tracking-tight">Pronunciation Hub</h1>
+            <p class="hero-subtitle text-slate-400 max-w-xl mx-auto">
+                ネイティブの音をインストールする。<br>
+                カタカナ英語を卒業し、通じる「音」を手に入れる。
+            </p>
+        </header>
+
+        <!-- レベル選択グリッド -->
+        <div class="px-4 max-w-4xl mx-auto -mt-10 grid gap-6 md:grid-cols-2 mb-12 relative z-10">
+            <!-- Level 0: Phonics (Basic) -->
+            <a href="level0/" class="level-card card-animate bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100" data-delay="0" data-level="0">
+                <div class="h-2 bg-gradient-to-r from-cyan-400 to-cyan-600"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4 relative">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-600 text-white flex items-center justify-center text-2xl shadow-md">
+                            <!-- アイコン: 音量/基礎 -->
+                            <i class="fa-solid fa-volume-low"></i>
+                        </div>
+                        <div class="progress-chart" data-level="0">
+                            <svg class="progress-ring" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="gradient-0" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="progress-ring-background" cx="24" cy="24" r="20" fill="none" stroke="#e2e8f0" stroke-width="4"></circle>
+                                <circle class="progress-ring-circle" cx="24" cy="24" r="20" fill="none" stroke="url(#gradient-0)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 24 24)"></circle>
+                            </svg>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-1">超入門</h2>
+                    <p class="text-xs font-bold text-cyan-600 uppercase tracking-wider mb-3">Level 0: Phonics</p>
+                    <p class="text-sm text-slate-500 mb-6 min-h-[3em]">フォニックスと発音記号。母音と子音の正しい口の形を作る。</p>
+                    <div class="flex items-center text-sm font-bold text-cyan-600 group">
+                        学習を始める <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Level 1: Linking (Beginner) -->
+            <a href="level1/" class="level-card card-animate bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100" data-delay="100" data-level="1">
+                <div class="h-2 bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4 relative">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-md">
+                            <!-- アイコン: 繋がり -->
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <div class="progress-chart" data-level="1">
+                            <svg class="progress-ring" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="progress-ring-background" cx="24" cy="24" r="20" fill="none" stroke="#e2e8f0" stroke-width="4"></circle>
+                                <circle class="progress-ring-circle" cx="24" cy="24" r="20" fill="none" stroke="url(#gradient-1)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 24 24)"></circle>
+                            </svg>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-1">初級</h2>
+                    <p class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-3">Level 1: Linking</p>
+                    <p class="text-sm text-slate-500 mb-6 min-h-[3em]">音がつながる「リンキング」と消える音。RとL、Thの完全攻略。</p>
+                    <div class="flex items-center text-sm font-bold text-emerald-600 group">
+                        学習を始める <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Level 2: Rhythm (Intermediate) -->
+            <a href="level2/" class="level-card card-animate bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100" data-delay="200" data-level="2">
+                <div class="h-2 bg-gradient-to-r from-amber-400 to-amber-600"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4 relative">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-2xl shadow-md">
+                            <!-- アイコン: 波形/リズム -->
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <div class="progress-chart" data-level="2">
+                            <svg class="progress-ring" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="progress-ring-background" cx="24" cy="24" r="20" fill="none" stroke="#e2e8f0" stroke-width="4"></circle>
+                                <circle class="progress-ring-circle" cx="24" cy="24" r="20" fill="none" stroke="url(#gradient-2)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 24 24)"></circle>
+                            </svg>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-1">中級</h2>
+                    <p class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-3">Level 2: Rhythm & Stress</p>
+                    <p class="text-sm text-slate-500 mb-6 min-h-[3em]">英語特有のリズムとストレス（強勢）。リダクション（弱化）を学ぶ。</p>
+                    <div class="flex items-center text-sm font-bold text-amber-600 group">
+                            学習を始める <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Level 3: Intonation (Advanced) -->
+            <a href="level3/" class="level-card card-animate bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100" data-delay="300" data-level="3">
+                <div class="h-2 bg-gradient-to-r from-purple-400 to-purple-600"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4 relative">
+                        <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-2xl shadow-md">
+                            <!-- アイコン: マイク/実践 -->
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <div class="progress-chart" data-level="3">
+                            <svg class="progress-ring" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#c084fc;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="progress-ring-background" cx="24" cy="24" r="20" fill="none" stroke="#e2e8f0" stroke-width="4"></circle>
+                                <circle class="progress-ring-circle" cx="24" cy="24" r="20" fill="none" stroke="url(#gradient-3)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 24 24)"></circle>
+                            </svg>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-1">上級</h2>
+                    <p class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-3">Level 3: Flow & Shadowing</p>
+                    <p class="text-sm text-slate-500 mb-6 min-h-[3em]">イントネーションで感情を乗せる。シャドーイングによる実践トレーニング。</p>
+                    <div class="flex items-center text-sm font-bold text-purple-600 group">
+                        学習を始める <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <footer class="footer-animate text-center text-slate-400 text-sm pb-10">
+            &copy; 2025 英会話ジム ECG
+        </footer>
+    </div>
+
+    <!-- ECGくんフローティングボタン -->
+    <button id="ecgKunButton" class="ecg-kun-button fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center border-2 border-indigo-200 hover:border-indigo-400">
+        <!-- 画像パスはそのまま維持、フォールバックとしてアイコンを表示する工夫 -->
+        <img id="ecgKunFloatingImg" src="image/ECGkun.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" alt="ECGくん" class="w-12 h-12 object-contain">
+        <i class="fa-solid fa-robot text-3xl text-indigo-500" style="display:none"></i>
+    </button>
+
+    <!-- ECGくんチャットモーダル -->
+    <div id="ecgChatModal" class="ecg-chat-modal fixed inset-0 z-[100] flex items-center justify-center pointer-events-none">
+        <div class="ecg-chat-overlay absolute inset-0 bg-black/30 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        <div class="ecg-chat-container relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl h-[80vh] max-h-[800px] flex flex-col transform scale-95 opacity-0 transition-all duration-300">
+            <!-- チャットヘッダー -->
+            <div class="ecg-chat-header bg-gradient-to-r from-indigo-500 to-indigo-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img id="ecgKunHeaderImg" src="image/ECGkun.png" onerror="this.src='https://via.placeholder.com/40?text=ECG'" alt="ECGくん" class="w-10 h-10 object-contain bg-white rounded-full">
+                    <div>
+                        <h3 class="font-bold text-lg">ECG発音コーチ</h3>
+                        <p class="text-xs text-indigo-100">Listening...</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="ecgChatSettings" class="text-white/80 hover:text-white transition-colors" title="ECGくんをカスタマイズ">
+                        <i class="fa-solid fa-palette text-lg"></i>
+                    </button>
+                    <button id="ecgChatClose" class="text-white/80 hover:text-white transition-colors">
+                        <i class="fa-solid fa-times text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- チャットメッセージエリア -->
+            <div id="ecgChatMessages" class="ecg-chat-messages flex-1 overflow-y-auto p-4 space-y-4">
+                <!-- メッセージはJavaScriptで動的に追加 -->
+            </div>
+
+            <!-- チャット入力エリア（選択肢ボタン用） -->
+            <div id="ecgChatOptions" class="ecg-chat-options p-4 border-t border-slate-200 space-y-2">
+                <!-- 選択肢ボタンはJavaScriptで動的に追加 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ECGくんカスタマイズモーダル -->
+    <div id="ecgCustomizeModal" class="ecg-customize-modal fixed inset-0 z-[110] flex items-center justify-center pointer-events-none">
+        <div class="ecg-customize-overlay absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        <div class="ecg-customize-container relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col transform scale-95 opacity-0 transition-all duration-300">
+            <div class="ecg-customize-header bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
+                <h3 class="font-bold text-lg">コーチをカスタマイズ</h3>
+                <button id="ecgCustomizeClose" class="text-white/80 hover:text-white transition-colors">
+                    <i class="fa-solid fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="ecg-customize-content p-6 overflow-y-auto">
+                <p class="text-sm text-slate-600 mb-4">発音レッスンをクリアすると、新しいECGくんのスタイルが解放されます！</p>
+                <div id="ecgCustomizeGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <!-- 画像選択カードはJavaScriptで動的に追加 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 設定: 文法編と区別するため、IDのプレフィックスを 'p' (Pronunciation) に変更 ---
+        
+        // 各レベルのレッスン数とレッスンIDの定義（発音用）
+        const levelConfig = {
+            0: { total: 8, lessons: ['p0-1', 'p0-2', 'p0-3', 'p0-4', 'p0-5', 'p0-6', 'p0-7', 'p0-8'] },
+            1: { total: 7, lessons: ['p1-9', 'p1-10', 'p1-11', 'p1-12', 'p1-13', 'p1-14', 'p1-15'] },
+            2: { total: 8, lessons: ['p2-16', 'p2-17', 'p2-18', 'p2-19', 'p2-20', 'p2-21', 'p2-22', 'p2-23'] },
+            3: { total: 7, lessons: ['p3-24', 'p3-25', 'p3-26', 'p3-27', 'p3-28', 'p3-29', 'p3-30'] }
+        };
+
+        // 達成率を計算して円グラフを更新
+        function updateProgressChart(level, delay = 0) {
+            const config = levelConfig[level];
+            if (!config) return;
+
+            let completedCount = 0;
+            config.lessons.forEach(lessonId => {
+                const key = `lesson_completed_${lessonId}`;
+                if (localStorage.getItem(key) === 'true') {
+                    completedCount++;
+                }
+            });
+
+            const percentage = Math.round((completedCount / config.total) * 100);
+            const chart = document.querySelector(`.progress-chart[data-level="${level}"]`);
+            if (!chart) return;
+
+            const circle = chart.querySelector('.progress-ring-circle');
+            const text = chart.querySelector('.progress-text');
+            
+            if (circle && text) {
+                const circumference = 2 * Math.PI * 20; // r=20
+                const offset = circumference - (percentage / 100) * circumference;
+                
+                // 初期状態を設定
+                circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                circle.style.strokeDashoffset = circumference; // 0%から開始
+                
+                // アニメーション開始を遅延
+                setTimeout(() => {
+                    circle.style.strokeDashoffset = offset;
+                    
+                    // パーセンテージのカウントアップアニメーション
+                    animateCounter(text, 0, percentage, 800);
+                }, delay);
+            }
+        }
+
+        // カウントアップアニメーション
+        function animateCounter(element, start, end, duration) {
+            const startTime = performance.now();
+            const animate = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(start + (end - start) * easeOut);
+                element.textContent = `${current}%`;
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    element.textContent = `${end}%`;
+                }
+            };
+            requestAnimationFrame(animate);
+        }
+
+        // ページ読み込み後にアニメーションを発動
+        document.addEventListener('DOMContentLoaded', function() {
+            // カードアニメーション
+            const cards = document.querySelectorAll('.card-animate');
+            cards.forEach((card, index) => {
+                const delay = parseInt(card.getAttribute('data-delay')) || 0;
+                const level = parseInt(card.getAttribute('data-level')) || 0;
+                const cardDelay = 300 + delay * 0.5;
+                
+                setTimeout(() => {
+                    card.classList.add('visible');
+                    const icon = card.querySelector('.w-12');
+                    const title = card.querySelector('h2');
+                    const desc = card.querySelector('p.text-xs');
+                    const text = card.querySelector('p.text-sm');
+                    const button = card.querySelector('.flex.items-center');
+                    
+                    if (icon) setTimeout(() => { icon.style.animationDelay = '0.1s'; }, 100);
+                    
+                    [title, desc, text, button].forEach((el, i) => {
+                        if (el) {
+                            el.style.opacity = '0';
+                            el.style.transform = 'translateY(10px)';
+                            setTimeout(() => {
+                                el.style.transition = 'all 0.3s ease-out';
+                                el.style.opacity = '1';
+                                el.style.transform = 'translateY(0)';
+                            }, 50 + (i * 50));
+                        }
+                    });
+                    
+                    updateProgressChart(level, cardDelay + 600);
+                }, cardDelay);
+            });
+
+            const footer = document.querySelector('.footer-animate');
+            setTimeout(() => { footer.classList.add('visible'); }, 600);
+
+            initECGChat();
+        });
+
+        // ECGくんチャット機能（発音編用データ）
+        function initECGChat() {
+            const chatButton = document.getElementById('ecgKunButton');
+            const chatModal = document.getElementById('ecgChatModal');
+            const chatClose = document.getElementById('ecgChatClose');
+            const chatMessages = document.getElementById('ecgChatMessages');
+            const chatOptions = document.getElementById('ecgChatOptions');
+
+            // Q&Aデータ (発音学習用に内容を変更)
+            const qaData = [
+                {
+                    question: '今の学習進捗を教えて',
+                    type: 'progress',
+                    answer: null
+                },
+                {
+                    question: 'おすすめのレッスンは？',
+                    type: 'recommendation',
+                    answer: null
+                },
+                {
+                    question: '舌が疲れて動かない...',
+                    answer: 'それは良い兆候です！日本語にはない舌の筋肉を使っている証拠です。筋トレと同じで、最初は疲れますが、続けることで滑らかに動くようになります。無理せず休憩しながらやりましょう！'
+                },
+                {
+                    question: 'RとLが聞き取れない',
+                    answer: 'まずは「自分で発音できるようになる」ことが近道です。Level 1の「RとL」のレッスンで舌の位置を確認し、大げさに発音する練習をしてみてください。自分が言える音は、聞き取れるようになります！'
+                },
+                {
+                    question: '自分の発音を確認するには？',
+                    answer: 'スマホの録音機能を使うのが一番です！お手本の音声を聞いた後、自分の声を録音して聞き比べてみましょう。「客観的に自分の声を聞く」ことが上達への第一歩です。'
+                },
+                {
+                    question: 'ネイティブっぽく話したい！',
+                    answer: 'Level 2の「リズム」と「リダクション（音の脱落）」を意識しましょう。単語を一つ一つはっきり言うのではなく、重要な単語を強く、それ以外を弱く・速く言うのがコツです。'
+                }
+            ];
+
+            let isInitialized = false;
+
+            function openChat() {
+                chatModal.classList.add('active');
+                if (!isInitialized) {
+                    showInitialMessage();
+                    isInitialized = true;
+                }
+            }
+
+            function closeChat() {
+                chatModal.classList.remove('active');
+            }
+
+            function showInitialMessage() {
+                chatMessages.innerHTML = '';
+                chatOptions.innerHTML = '';
+
+                const selectedImageId = localStorage.getItem('ecg_selected_image') || 'default';
+                // 画像パスは共通の場所を参照
+                const ecgImages = [
+                    { id: 'default', path: 'image/ECGkun.png' },
+                    { id: 'lv1', path: 'image/ECGkun-lv1.png' },
+                    { id: 'lv2', path: 'image/ECGkun-lv2.png' },
+                    { id: 'lv3', path: 'image/ECGkun-lv3.png' },
+                    // ...他も同様
+                ];
+                const selectedImage = ecgImages.find(img => img.id === selectedImageId) || ecgImages[0];
+                
+                // 発音ハブ用の初期メッセージ
+                const initialMessage = `
+                    <div class="ecg-message ecg-message-ecg">
+                        <div class="ecg-message-avatar">
+                            <img src="${selectedImage.path}" onerror="this.src='https://via.placeholder.com/40?text=ECG'" alt="ECGくん">
+                        </div>
+                        <div class="ecg-message-content">
+                            <p>Hi there! 発音コーチのECGくんです！🎙️</p>
+                            <p class="mt-2">Pronunciation Hubへようこそ！</p>
+                            <p class="mt-2">ここでは、英語の「音」のルールを体感しながら学びます。</p>
+                            <p class="mt-2"><strong>使い方：</strong></p>
+                            <ul class="mt-2 space-y-1 text-sm list-disc list-inside">
+                                <li><strong>Level 0:</strong> まずはフォニックスで基礎固め</li>
+                                <li><strong>Level 1:</strong> 音の繋がり（リンキング）を学ぶ</li>
+                                <li><strong>Level 2:</strong> 英語特有のリズムを習得</li>
+                                <li><strong>Level 3:</strong> 感情を乗せるイントネーション</li>
+                            </ul>
+                            <p class="mt-3">実際に口を動かすことが大切です！何か質問はありますか？</p>
+                        </div>
+                    </div>
+                `;
+                chatMessages.innerHTML = initialMessage;
+                scrollToBottom();
+                setTimeout(() => { showQAOptions(); }, 500);
+            }
+
+            function showQAOptions() {
+                chatOptions.innerHTML = '';
+                qaData.forEach((qa) => {
+                    const button = document.createElement('button');
+                    button.className = 'ecg-option-button';
+                    button.textContent = qa.question;
+                    button.addEventListener('click', () => {
+                        showAnswer(qa.question, qa.answer, qa.type);
+                        chatOptions.innerHTML = '';
+                    });
+                    chatOptions.appendChild(button);
+                });
+            }
+
+            function getProgress() {
+                // 発音用の config を使用
+                const pLevelConfig = {
+                    0: { total: 8, lessons: ['p0-1', 'p0-2', 'p0-3', 'p0-4', 'p0-5', 'p0-6', 'p0-7', 'p0-8'], name: 'Level 0 (Phonics)' },
+                    1: { total: 7, lessons: ['p1-9', 'p1-10', 'p1-11', 'p1-12', 'p1-13', 'p1-14', 'p1-15'], name: 'Level 1 (Linking)' },
+                    2: { total: 8, lessons: ['p2-16', 'p2-17', 'p2-18', 'p2-19', 'p2-20', 'p2-21', 'p2-22', 'p2-23'], name: 'Level 2 (Rhythm)' },
+                    3: { total: 7, lessons: ['p3-24', 'p3-25', 'p3-26', 'p3-27', 'p3-28', 'p3-29', 'p3-30'], name: 'Level 3 (Intonation)' }
+                };
+
+                let totalLessons = 0;
+                let completedLessons = 0;
+                const levelProgress = [];
+
+                Object.keys(pLevelConfig).forEach(level => {
+                    const config = pLevelConfig[level];
+                    let levelCompleted = 0;
+                    config.lessons.forEach(lessonId => {
+                        totalLessons++;
+                        const key = `lesson_completed_${lessonId}`;
+                        if (localStorage.getItem(key) === 'true') {
+                            completedLessons++;
+                            levelCompleted++;
+                        }
+                    });
+                    const percentage = Math.round((levelCompleted / config.total) * 100);
+                    levelProgress.push({
+                        name: config.name,
+                        completed: levelCompleted,
+                        total: config.total,
+                        percentage: percentage
+                    });
+                });
+
+                return {
+                    total: completedLessons,
+                    totalLessons: totalLessons,
+                    percentage: Math.round((completedLessons / totalLessons) * 100),
+                    levels: levelProgress
+                };
+            }
+
+            function getRecommendation() {
+                 const pLevelConfig = {
+                    0: { lessons: ['p0-1', 'p0-2', 'p0-3', 'p0-4', 'p0-5', 'p0-6', 'p0-7', 'p0-8'], name: 'Level 0', url: 'level0/' },
+                    1: { lessons: ['p1-9', 'p1-10', 'p1-11', 'p1-12', 'p1-13', 'p1-14', 'p1-15'], name: 'Level 1', url: 'level1/' },
+                    2: { lessons: ['p2-16', 'p2-17', 'p2-18', 'p2-19', 'p2-20', 'p2-21', 'p2-22', 'p2-23'], name: 'Level 2', url: 'level2/' },
+                    3: { lessons: ['p3-24', 'p3-25', 'p3-26', 'p3-27', 'p3-28', 'p3-29', 'p3-30'], name: 'Level 3', url: 'level3/' }
+                };
+
+                for (let level = 0; level <= 3; level++) {
+                    const config = pLevelConfig[level];
+                    for (let i = 0; i < config.lessons.length; i++) {
+                        const lessonId = config.lessons[i];
+                        const key = `lesson_completed_${lessonId}`;
+                        if (localStorage.getItem(key) !== 'true') {
+                            const lessonNum = level === 0 ? i + 1 : (level === 1 ? i + 9 : (level === 2 ? i + 16 : i + 24));
+                            return {
+                                level: config.name,
+                                lessonNum: lessonNum,
+                                url: `${config.url}lesson-${lessonId}.html` // 注意: このURL構造は仮定です
+                            };
+                        }
+                    }
+                }
+                return null;
+            }
+
+            function showAnswer(question, answer, type) {
+                const userMessage = document.createElement('div');
+                userMessage.className = 'ecg-message ecg-message-user';
+                userMessage.innerHTML = `
+                    <div class="ecg-message-avatar">
+                        <i class="fa-solid fa-user text-indigo-500 text-xl flex items-center justify-center h-full"></i>
+                    </div>
+                    <div class="ecg-message-content">
+                        <p>${question}</p>
+                    </div>
+                `;
+                chatMessages.appendChild(userMessage);
+                scrollToBottom();
+
+                setTimeout(() => {
+                    const ecgMessage = document.createElement('div');
+                    ecgMessage.className = 'ecg-message ecg-message-ecg';
+                    let answerText = '';
+                    
+                    if (type === 'progress') {
+                        const progress = getProgress();
+                        answerText = `
+                            <p><strong>現在の学習進捗（発音編）：</strong></p>
+                            <p class="mt-2">全体: <strong>${progress.total}/${progress.totalLessons}レッスン</strong> クリア（${progress.percentage}%）</p>
+                            <div class="mt-3 space-y-2">
+                                ${progress.levels.map(level => `
+                                    <p class="text-sm">${level.name}: ${level.completed}/${level.total}（${level.percentage}%）</p>
+                                `).join('')}
+                            </div>
+                            <p class="mt-3">毎日少しずつ口を動かしましょう！👄</p>
+                        `;
+                    } else if (type === 'recommendation') {
+                        const recommendation = getRecommendation();
+                        if (recommendation) {
+                            answerText = `
+                                <p>次は <strong>${recommendation.level}</strong> の <strong>レッスン${recommendation.lessonNum}</strong> がおすすめです！</p>
+                                <p class="mt-2">前のレッスンの音を意識しながら進めましょう。Keep going! ✨</p>
+                            `;
+                        } else {
+                            answerText = `
+                                <p>🎉 Amazing! 全ての発音レッスンをクリアしました！</p>
+                                <p class="mt-2">これからは、映画やドラマでシャドーイングをして、さらに磨きをかけましょう！</p>
+                            `;
+                        }
+                    } else {
+                        answerText = `<p>${answer}</p>`;
+                    }
+                    
+                    const selectedImageId = localStorage.getItem('ecg_selected_image') || 'default';
+                    // 簡易的な参照
+                    const ecgImages = [
+                        { id: 'default', path: 'image/ECGkun.png' },
+                         // ... 他のパス
+                    ];
+                    const selectedImage = ecgImages.find(img => img.id === selectedImageId) || {path: 'image/ECGkun.png'};
+
+                    ecgMessage.innerHTML = `
+                        <div class="ecg-message-avatar">
+                            <img src="${selectedImage.path}" onerror="this.src='https://via.placeholder.com/40?text=ECG'" alt="ECGくん">
+                        </div>
+                        <div class="ecg-message-content">${answerText}</div>
+                    `;
+                    chatMessages.appendChild(ecgMessage);
+                    scrollToBottom();
+                    setTimeout(() => { showQAOptions(); }, 500);
+                }, 300);
+            }
+
+            function scrollToBottom() {
+                setTimeout(() => { chatMessages.scrollTop = chatMessages.scrollHeight; }, 100);
+            }
+
+            chatButton.addEventListener('click', openChat);
+            chatClose.addEventListener('click', closeChat);
+            chatModal.querySelector('.ecg-chat-overlay').addEventListener('click', closeChat);
+            initECGCustomize();
+        }
+
+        // ECGくんカスタマイズ機能（ロジックは文法編と共通だが、参照する進捗は発音編のものを使用）
+        function initECGCustomize() {
+            const customizeButton = document.getElementById('ecgChatSettings');
+            const customizeModal = document.getElementById('ecgCustomizeModal');
+            const customizeClose = document.getElementById('ecgCustomizeClose');
+            const customizeGrid = document.getElementById('ecgCustomizeGrid');
+            const floatingImg = document.getElementById('ecgKunFloatingImg');
+            const headerImg = document.getElementById('ecgKunHeaderImg');
+
+            const ecgImages = [
+                { id: 'default', name: 'デフォルト', path: 'image/ECGkun.png', unlockAt: 0 },
+                { id: 'lv1', name: 'レベル1', path: 'image/ECGkun-lv1.png', unlockAt: 2 },
+                { id: 'lv2', name: 'レベル2', path: 'image/ECGkun-lv2.png', unlockAt: 5 },
+                { id: 'lv3', name: 'レベル3', path: 'image/ECGkun-lv3.png', unlockAt: 8 },
+                { id: 'lv4', name: 'レベル4', path: 'image/ECGkun-lv4.png', unlockAt: 12 },
+                { id: 'lv5', name: 'レベル5', path: 'image/ECGkun-lv5.png', unlockAt: 15 },
+                { id: 'lv6', name: 'レベル6', path: 'image/ECGkun-lv6.png', unlockAt: 19 },
+                { id: 'lv7', name: 'レベル7', path: 'image/ECGkun-lv7.png', unlockAt: 23 },
+                { id: 'lv8', name: 'レベル8', path: 'image/ECGkun-lv8.png', unlockAt: 26 },
+                { id: 'lv9', name: 'レベル9', path: 'image/ECGkun-lv9.png', unlockAt: 28 },
+                { id: 'lv10', name: 'レベル10', path: 'image/ECGkun-lv10.png', unlockAt: 30 }
+            ];
+
+            function getCompletedLessonsCount() {
+                // 発音編のレッスンIDでカウント
+                const config = {
+                    lessons: [
+                        'p0-1','p0-2','p0-3','p0-4','p0-5','p0-6','p0-7','p0-8',
+                        'p1-9','p1-10','p1-11','p1-12','p1-13','p1-14','p1-15',
+                        'p2-16','p2-17','p2-18','p2-19','p2-20','p2-21','p2-22','p2-23',
+                        'p3-24','p3-25','p3-26','p3-27','p3-28','p3-29','p3-30'
+                    ]
+                };
+                let count = 0;
+                config.lessons.forEach(lessonId => {
+                    if (localStorage.getItem(`lesson_completed_${lessonId}`) === 'true') {
+                        count++;
+                    }
+                });
+                return count;
+            }
+
+            function getSelectedImage() { return localStorage.getItem('ecg_selected_image') || 'default'; }
+
+            function applyImage(imageId) {
+                const image = ecgImages.find(img => img.id === imageId) || ecgImages[0];
+                const fallback = "this.src='https://via.placeholder.com/40?text=ECG'";
+                
+                // Set images with simple error handling logic embedded in HTML attributes previously
+                if(floatingImg) floatingImg.src = image.path;
+                if(headerImg) headerImg.src = image.path;
+                
+                const chatAvatars = document.querySelectorAll('.ecg-message-ecg .ecg-message-avatar img');
+                chatAvatars.forEach(avatar => { avatar.src = image.path; });
+            }
+
+            function openCustomizeModal() {
+                customizeModal.classList.add('active');
+                renderCustomizeGrid();
+            }
+            function closeCustomizeModal() { customizeModal.classList.remove('active'); }
+
+            function renderCustomizeGrid() {
+                customizeGrid.innerHTML = '';
+                const completedCount = getCompletedLessonsCount();
+                const selectedId = getSelectedImage();
+
+                ecgImages.forEach(image => {
+                    const isUnlocked = completedCount >= image.unlockAt;
+                    const isSelected = image.id === selectedId;
+                    const card = document.createElement('div');
+                    
+                    // Style adaptations for Indigo theme
+                    card.className = `ecg-image-card relative bg-white rounded-xl border-2 overflow-hidden transition-all ${
+                        isUnlocked 
+                            ? isSelected 
+                                ? 'border-indigo-500 shadow-lg cursor-pointer' 
+                                : 'border-slate-200 hover:border-indigo-300 hover:shadow-md cursor-pointer'
+                            : 'border-slate-300 cursor-not-allowed'
+                    }`;
+
+                    card.innerHTML = `
+                        <div class="aspect-square p-4 flex items-center justify-center bg-slate-50 relative">
+                            <img src="${image.path}" onerror="this.src='https://via.placeholder.com/80?text=Locked'" alt="${image.name}" class="w-full h-full object-contain ${
+                                isUnlocked ? '' : 'ecg-image-silhouette'
+                            }">
+                            ${!isUnlocked ? `<div class="absolute top-2 right-2 bg-slate-700/80 rounded-full p-1.5"><i class="fa-solid fa-lock text-white text-xs"></i></div>` : ''}
+                        </div>
+                        <div class="p-3 border-t border-slate-100">
+                            <p class="text-sm font-bold ${isUnlocked ? 'text-slate-800' : 'text-slate-500'}">${image.name}</p>
+                            ${isUnlocked 
+                                ? isSelected 
+                                    ? '<p class="text-xs text-indigo-600 mt-1"><i class="fa-solid fa-check-circle mr-1"></i>選択中</p>'
+                                    : '<p class="text-xs text-green-600 mt-1"><i class="fa-solid fa-unlock mr-1"></i>解放済み</p>'
+                                : `<p class="text-xs text-slate-500 mt-1 font-medium">レッスン${image.unlockAt}達成で解放</p>`
+                            }
+                        </div>
+                    `;
+
+                    if (isUnlocked) {
+                        card.addEventListener('click', () => {
+                            localStorage.setItem('ecg_selected_image', image.id);
+                            applyImage(image.id);
+                            renderCustomizeGrid();
+                        });
+                    }
+                    customizeGrid.appendChild(card);
+                });
+            }
+
+            applyImage(getSelectedImage());
+            customizeButton.addEventListener('click', openCustomizeModal);
+            customizeClose.addEventListener('click', closeCustomizeModal);
+            customizeModal.querySelector('.ecg-customize-overlay').addEventListener('click', closeCustomizeModal);
+        }
+    </script>
+</body>
+</html>

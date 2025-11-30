@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中級 | English Pronunciation Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen">
+    <div class="min-h-screen bg-slate-50">
+        <!-- ヘッダー -->
+        <div class="level-header-animate bg-amber-600 text-white p-6 pb-12 shadow-md">
+            <a href="../index.html" class="mb-4 text-white/80 hover:text-white text-sm font-bold flex items-center inline-block">
+                <i class="fa-solid fa-arrow-left mr-2"></i> HOME
+            </a>
+            <h1 class="level-title-animate text-3xl font-bold">中級</h1>
+            <p class="level-subtitle-animate opacity-80">Level 2: ネイティブの流暢さへ！「音声変化とリズム」</p>
+        </div>
+
+        <!-- リスト -->
+        <div class="max-w-3xl mx-auto px-4 -mt-6 space-y-3 pb-20">
+            <a href="lesson-l2-13.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="0">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">13. 英語独特の「リズム」</h3>
+                    <p class="text-sm text-slate-500">日本語は「タン・タン・タン」、英語は「ターン・タ・ターン」。ストレスタイムの話</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l2-14.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="100">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">14. 文の中の強弱「センテンス・ストレス」</h3>
+                    <p class="text-sm text-slate-500">大事な単語（内容語）は強く、機能語（in, a, theなど）は弱く速く</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l2-15.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="200">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">15. アメリカ英語の定番「フラッピングT」</h3>
+                    <p class="text-sm text-slate-500">TがDやRのような音に変わる。water, better, party</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l2-16.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="300">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">16. 音の脱落「リダクション（消失）」①</h3>
+                    <p class="text-sm text-slate-500">音が消える現象。Good morning の d、Next day の t</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l2-17.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="400">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">17. 音の脱落「リダクション（短縮）」②</h3>
+                    <p class="text-sm text-slate-500">wanna, gonna, hafta などの口語表現</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l2-18.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="500">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">18. 音の同化「アシミレーション」</h3>
+                    <p class="text-sm text-slate-500">音が混ざって別の音になる。Did you? →「ディジュー」、Nice to meet you.</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="../quiz.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.lesson-item-animate');
+            items.forEach(item => {
+                const delay = parseInt(item.getAttribute('data-delay')) || 0;
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 400 + delay);
+            });
+            // クリア状況を反映
+            applyClearStatus();
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超入門 | English Pronunciation Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen">
+    <div class="min-h-screen bg-slate-50">
+        <!-- ヘッダー -->
+        <div class="level-header-animate bg-cyan-600 text-white p-6 pb-12 shadow-md">
+            <a href="../index.html" class="mb-4 text-white/80 hover:text-white text-sm font-bold flex items-center inline-block">
+                <i class="fa-solid fa-arrow-left mr-2"></i> HOME
+            </a>
+            <h1 class="level-title-animate text-3xl font-bold">超入門</h1>
+            <p class="level-subtitle-animate opacity-80">Level 0: 脱・カタカナ英語！「口の筋肉トレーニング」</p>
+        </div>
+
+        <!-- リスト -->
+        <div class="max-w-3xl mx-auto px-4 -mt-6 space-y-3 pb-20">
+            <a href="lesson-l0-1.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="0">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">1. 発音の基礎知識と「口の準備体操」</h3>
+                    <p class="text-sm text-slate-500">なぜカタカナじゃ通じないのか？喉を開く、腹式呼吸、舌の基本ポジション</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l0-2.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="100">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">2. 日本人の宿敵①「RとL」</h3>
+                    <p class="text-sm text-slate-500">舌を巻くR、歯茎に当てるL。Right / Lightの撃退</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l0-3.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="200">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">3. 日本人の宿敵②「TH（無声音・有声音）」</h3>
+                    <p class="text-sm text-slate-500">舌を噛む勇気。Thank you / This</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l0-4.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="300">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">4. 唇を使う音「F/V」と「B」の違い</h3>
+                    <p class="text-sm text-slate-500">下唇を噛むF/V、破裂させるB。Fan / Van / Ban</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l0-5.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="400">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">5. 英語の命！「母音」の基礎（短母音）</h3>
+                    <p class="text-sm text-slate-500">「ア」じゃない！ cat, bed, sit, hot, cut の違いを明確に</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+
+            <a href="lesson-l0-6.html" class="lesson-item-animate bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors group block" data-delay="500">
+                <div>
+                    <h3 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">6. 口を大きく動かす「長母音・二重母音」</h3>
+                    <p class="text-sm text-slate-500">cake, bike, go, cow など。日本語の「えー」「おー」との違い</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-slate-300"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="../quiz.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.lesson-item-animate');
+            items.forEach(item => {
+                const delay = parseInt(item.getAttribute('data-delay')) || 0;
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 400 + delay);
+            });
+            // クリア状況を反映
+            applyClearStatus();
+        });
+    </script>
+</body>
+</html>
+
