@@ -227,10 +227,10 @@
         
         // 各レベルのレッスン数とレッスンIDの定義（発音用）
         const levelConfig = {
-            0: { total: 8, lessons: ['p0-1', 'p0-2', 'p0-3', 'p0-4', 'p0-5', 'p0-6', 'p0-7', 'p0-8'] },
-            1: { total: 7, lessons: ['p1-9', 'p1-10', 'p1-11', 'p1-12', 'p1-13', 'p1-14', 'p1-15'] },
-            2: { total: 8, lessons: ['p2-16', 'p2-17', 'p2-18', 'p2-19', 'p2-20', 'p2-21', 'p2-22', 'p2-23'] },
-            3: { total: 7, lessons: ['p3-24', 'p3-25', 'p3-26', 'p3-27', 'p3-28', 'p3-29', 'p3-30'] }
+            0: { total: 6, lessons: ['l0-1', 'l0-2', 'l0-3', 'l0-4', 'l0-5', 'l0-6'] },
+            1: { total: 6, lessons: ['l1-7', 'l1-8', 'l1-9', 'l1-10', 'l1-11', 'l1-12'] },
+            2: { total: 6, lessons: ['l2-13', 'l2-14', 'l2-15', 'l2-16', 'l2-17', 'l2-18'] },
+            3: { total: 8, lessons: ['l3-19', 'l3-20', 'l3-21', 'l3-22', 'l3-23', 'l3-24', 'l3-25', 'l3-26'] }
         };
 
         // 達成率を計算して円グラフを更新
@@ -440,10 +440,10 @@
             function getProgress() {
                 // 発音用の config を使用
                 const pLevelConfig = {
-                    0: { total: 8, lessons: ['p0-1', 'p0-2', 'p0-3', 'p0-4', 'p0-5', 'p0-6', 'p0-7', 'p0-8'], name: 'Level 0 (Phonics)' },
-                    1: { total: 7, lessons: ['p1-9', 'p1-10', 'p1-11', 'p1-12', 'p1-13', 'p1-14', 'p1-15'], name: 'Level 1 (Linking)' },
-                    2: { total: 8, lessons: ['p2-16', 'p2-17', 'p2-18', 'p2-19', 'p2-20', 'p2-21', 'p2-22', 'p2-23'], name: 'Level 2 (Rhythm)' },
-                    3: { total: 7, lessons: ['p3-24', 'p3-25', 'p3-26', 'p3-27', 'p3-28', 'p3-29', 'p3-30'], name: 'Level 3 (Intonation)' }
+                    0: { total: 6, lessons: ['l0-1', 'l0-2', 'l0-3', 'l0-4', 'l0-5', 'l0-6'], name: 'Level 0 (Phonics)' },
+                    1: { total: 6, lessons: ['l1-7', 'l1-8', 'l1-9', 'l1-10', 'l1-11', 'l1-12'], name: 'Level 1 (Linking)' },
+                    2: { total: 6, lessons: ['l2-13', 'l2-14', 'l2-15', 'l2-16', 'l2-17', 'l2-18'], name: 'Level 2 (Rhythm)' },
+                    3: { total: 8, lessons: ['l3-19', 'l3-20', 'l3-21', 'l3-22', 'l3-23', 'l3-24', 'l3-25', 'l3-26'], name: 'Level 3 (Intonation)' }
                 };
 
                 let totalLessons = 0;
@@ -480,10 +480,10 @@
 
             function getRecommendation() {
                  const pLevelConfig = {
-                    0: { lessons: ['p0-1', 'p0-2', 'p0-3', 'p0-4', 'p0-5', 'p0-6', 'p0-7', 'p0-8'], name: 'Level 0', url: 'level0/' },
-                    1: { lessons: ['p1-9', 'p1-10', 'p1-11', 'p1-12', 'p1-13', 'p1-14', 'p1-15'], name: 'Level 1', url: 'level1/' },
-                    2: { lessons: ['p2-16', 'p2-17', 'p2-18', 'p2-19', 'p2-20', 'p2-21', 'p2-22', 'p2-23'], name: 'Level 2', url: 'level2/' },
-                    3: { lessons: ['p3-24', 'p3-25', 'p3-26', 'p3-27', 'p3-28', 'p3-29', 'p3-30'], name: 'Level 3', url: 'level3/' }
+                    0: { lessons: ['l0-1', 'l0-2', 'l0-3', 'l0-4', 'l0-5', 'l0-6'], name: 'Level 0', url: 'level0/' },
+                    1: { lessons: ['l1-7', 'l1-8', 'l1-9', 'l1-10', 'l1-11', 'l1-12'], name: 'Level 1', url: 'level1/' },
+                    2: { lessons: ['l2-13', 'l2-14', 'l2-15', 'l2-16', 'l2-17', 'l2-18'], name: 'Level 2', url: 'level2/' },
+                    3: { lessons: ['l3-19', 'l3-20', 'l3-21', 'l3-22', 'l3-23', 'l3-24', 'l3-25', 'l3-26'], name: 'Level 3', url: 'level3/' }
                 };
 
                 for (let level = 0; level <= 3; level++) {
@@ -492,11 +492,12 @@
                         const lessonId = config.lessons[i];
                         const key = `lesson_completed_${lessonId}`;
                         if (localStorage.getItem(key) !== 'true') {
-                            const lessonNum = level === 0 ? i + 1 : (level === 1 ? i + 9 : (level === 2 ? i + 16 : i + 24));
+                            // レッスンIDから番号を取得（例: l0-1 -> 1, l1-7 -> 7）
+                            const lessonNum = parseInt(lessonId.split('-')[1]);
                             return {
                                 level: config.name,
                                 lessonNum: lessonNum,
-                                url: `${config.url}lesson-${lessonId}.html` // 注意: このURL構造は仮定です
+                                url: `${config.url}lesson-${lessonId}.html`
                             };
                         }
                     }
@@ -594,34 +595,40 @@
             const ecgImages = [
                 { id: 'default', name: 'デフォルト', path: 'image/ECGkun.png', unlockAt: 0 },
                 { id: 'lv1', name: 'レベル1', path: 'image/ECGkun-lv1.png', unlockAt: 2 },
-                { id: 'lv2', name: 'レベル2', path: 'image/ECGkun-lv2.png', unlockAt: 5 },
-                { id: 'lv3', name: 'レベル3', path: 'image/ECGkun-lv3.png', unlockAt: 8 },
-                { id: 'lv4', name: 'レベル4', path: 'image/ECGkun-lv4.png', unlockAt: 12 },
-                { id: 'lv5', name: 'レベル5', path: 'image/ECGkun-lv5.png', unlockAt: 15 },
-                { id: 'lv6', name: 'レベル6', path: 'image/ECGkun-lv6.png', unlockAt: 19 },
-                { id: 'lv7', name: 'レベル7', path: 'image/ECGkun-lv7.png', unlockAt: 23 },
-                { id: 'lv8', name: 'レベル8', path: 'image/ECGkun-lv8.png', unlockAt: 26 },
-                { id: 'lv9', name: 'レベル9', path: 'image/ECGkun-lv9.png', unlockAt: 28 },
-                { id: 'lv10', name: 'レベル10', path: 'image/ECGkun-lv10.png', unlockAt: 30 }
+                { id: 'lv2', name: 'レベル2', path: 'image/ECGkun-lv2.png', unlockAt: 4 },
+                { id: 'lv3', name: 'レベル3', path: 'image/ECGkun-lv3.png', unlockAt: 6 },
+                { id: 'lv4', name: 'レベル4', path: 'image/ECGkun-lv4.png', unlockAt: 9 },
+                { id: 'lv5', name: 'レベル5', path: 'image/ECGkun-lv5.png', unlockAt: 12 },
+                { id: 'lv6', name: 'レベル6', path: 'image/ECGkun-lv6.png', unlockAt: 14 },
+                { id: 'lv7', name: 'レベル7', path: 'image/ECGkun-lv7.png', unlockAt: 18 },
+                { id: 'lv8', name: 'レベル8', path: 'image/ECGkun-lv8.png', unlockAt: 21 },
+                { id: 'lv9', name: 'レベル9', path: 'image/ECGkun-lv9.png', unlockAt: 23 },
+                { id: 'lv10', name: 'レベル10', path: 'image/ECGkun-lv10.png', unlockAt: 26 }
             ];
 
-            function getCompletedLessonsCount() {
-                // 発音編のレッスンIDでカウント
-                const config = {
-                    lessons: [
-                        'p0-1','p0-2','p0-3','p0-4','p0-5','p0-6','p0-7','p0-8',
-                        'p1-9','p1-10','p1-11','p1-12','p1-13','p1-14','p1-15',
-                        'p2-16','p2-17','p2-18','p2-19','p2-20','p2-21','p2-22','p2-23',
-                        'p3-24','p3-25','p3-26','p3-27','p3-28','p3-29','p3-30'
-                    ]
-                };
-                let count = 0;
-                config.lessons.forEach(lessonId => {
-                    if (localStorage.getItem(`lesson_completed_${lessonId}`) === 'true') {
-                        count++;
+            // レッスンIDの順序定義（レッスン番号順）
+            const lessonOrder = [
+                'l0-1','l0-2','l0-3','l0-4','l0-5','l0-6',
+                'l1-7','l1-8','l1-9','l1-10','l1-11','l1-12',
+                'l2-13','l2-14','l2-15','l2-16','l2-17','l2-18',
+                'l3-19','l3-20','l3-21','l3-22','l3-23','l3-24','l3-25','l3-26'
+            ];
+
+            // レッスン1から指定されたレッスン番号まで連続してクリアしているかチェック
+            function isConsecutiveLessonsCompleted(upToLessonNum) {
+                if (upToLessonNum === 0) return true; // デフォルトは常に解放
+                
+                // レッスン1からupToLessonNumまで連続してクリアしているかチェック
+                for (let i = 0; i < upToLessonNum; i++) {
+                    const lessonId = lessonOrder[i];
+                    if (!lessonId) return false; // レッスンIDが存在しない場合はfalse
+                    
+                    const key = `lesson_completed_${lessonId}`;
+                    if (localStorage.getItem(key) !== 'true') {
+                        return false; // 1つでも未クリアがあればfalse
                     }
-                });
-                return count;
+                }
+                return true; // すべて連続してクリアしている
             }
 
             function getSelectedImage() { return localStorage.getItem('ecg_selected_image') || 'default'; }
@@ -646,11 +653,10 @@
 
             function renderCustomizeGrid() {
                 customizeGrid.innerHTML = '';
-                const completedCount = getCompletedLessonsCount();
                 const selectedId = getSelectedImage();
 
                 ecgImages.forEach(image => {
-                    const isUnlocked = completedCount >= image.unlockAt;
+                    const isUnlocked = isConsecutiveLessonsCompleted(image.unlockAt);
                     const isSelected = image.id === selectedId;
                     const card = document.createElement('div');
                     
@@ -676,7 +682,9 @@
                                 ? isSelected 
                                     ? '<p class="text-xs text-indigo-600 mt-1"><i class="fa-solid fa-check-circle mr-1"></i>選択中</p>'
                                     : '<p class="text-xs text-green-600 mt-1"><i class="fa-solid fa-unlock mr-1"></i>解放済み</p>'
-                                : `<p class="text-xs text-slate-500 mt-1 font-medium">レッスン${image.unlockAt}達成で解放</p>`
+                                : image.unlockAt === 0 
+                                    ? '<p class="text-xs text-slate-500 mt-1 font-medium">初期スタイル</p>'
+                                    : `<p class="text-xs text-slate-500 mt-1 font-medium">レッスン1～${image.unlockAt}をクリアで解放</p>`
                             }
                         </div>
                     `;
